@@ -1,0 +1,17 @@
+{
+    "title": "Yubiai Refund Claim",
+    "description": "The buyer of a Service filed a Refund Claim, and the seller disputed it.",
+    "rulingOptions": {
+      "titles": [
+        "Don't Refund",
+        "Refund"
+      ],
+      "descriptions": [
+        "The Service was delivered successfully, or the Refund Claim asks for an excessive amount.",
+        "The Service was NOT delivered successfully, and the Refund Claim asks for a correct amount."
+      ]
+    },
+    "category": "Escrow",
+    "question": "Should the Refund Claim be rejected, or accepted?",
+    "fileURI": "/ipfs/QmVdTJkimiGfeRUmUAmZ4hpGYXnDnpPgSd9LmCZeveUW32/yubiai-policy.pdf"
+}

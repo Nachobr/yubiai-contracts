@@ -7,7 +7,9 @@ import 'hardhat-gas-reporter';
 import '@typechain/hardhat';
 import 'solidity-coverage';
 import 'hardhat-deploy-tenderly';
-import {node_url, accounts, addForkConfiguration} from './utils/network';
+import {node_url, addForkConfiguration} from './utils/network';
+
+const accounts = [process.env.PRIVATE_KEY as string];
 
 const config: HardhatUserConfig = {
 	solidity: {
@@ -15,9 +17,10 @@ const config: HardhatUserConfig = {
 			{
 				version: '0.8.17',
 				settings: {
+					viaIR: true,
 					optimizer: {
 						enabled: true,
-						runs: 2000,
+						runs: 200,
 					},
 				},
 			},
@@ -33,31 +36,31 @@ const config: HardhatUserConfig = {
 		},
 		localhost: {
 			url: node_url('localhost'),
-			accounts: accounts(),
+			accounts,
 		},
 		staging: {
 			url: node_url('rinkeby'),
-			accounts: accounts('rinkeby'),
+			accounts,
 		},
 		production: {
 			url: node_url('mainnet'),
-			accounts: accounts('mainnet'),
+			accounts,
 		},
 		mainnet: {
 			url: node_url('mainnet'),
-			accounts: accounts('mainnet'),
+			accounts,
 		},
-		rinkeby: {
-			url: node_url('rinkeby'),
-			accounts: accounts('rinkeby'),
-		},
-		kovan: {
-			url: node_url('kovan'),
-			accounts: accounts('kovan'),
+		sepolia: {
+			url: node_url('sepolia'),
+			accounts,
 		},
 		goerli: {
 			url: node_url('goerli'),
-			accounts: accounts('goerli'),
+			accounts,
+		},
+		gnosis: {
+			url: node_url('gnosis'),
+			accounts,
 		},
 	}),
 	paths: {
