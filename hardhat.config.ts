@@ -62,6 +62,10 @@ const config: HardhatUserConfig = {
 			url: node_url('gnosis'),
 			accounts,
 		},
+		bsc: {
+			url: node_url('bsc'),
+			accounts,
+		},
 	}),
 	paths: {
 		sources: 'src',
