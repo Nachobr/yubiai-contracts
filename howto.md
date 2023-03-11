@@ -4,7 +4,7 @@ Get the private key of the wallet you're going to use to deploy the contracts.
 
 Get an etherscan api key, same deal. Goto https://etherscan.io and Sign Up. You need it to verify contracts.
 
-Get an infura key, https://infura.io
+Get an infura key, https://infura.io (elegir opcion Web3 API)
 
 Add all these to the .env. In ETH_NODE_URI, just overwrite the `<apiKey>` with the infura key.
 
